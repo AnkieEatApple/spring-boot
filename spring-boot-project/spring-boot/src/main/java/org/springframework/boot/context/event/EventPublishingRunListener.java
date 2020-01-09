@@ -42,6 +42,9 @@ import org.springframework.util.ErrorHandler;
  * @author Andy Wilkinson
  * @author Artsiom Yudovin
  * @since 1.0.0
+ *
+ * 实现 SpringApplicationRunListener、Ordered 接口，将 SpringApplicationRunListener 监听到的事件
+ * 转换成 SpringApplicationEvent 事件，发布到监听器们。
  */
 public class EventPublishingRunListener implements SpringApplicationRunListener, Ordered {
 
